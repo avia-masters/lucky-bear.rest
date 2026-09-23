@@ -36,23 +36,26 @@ a{color:#4ab8ff;text-decoration:none;transition:.3s}
 a:hover{color:#7acbff;text-shadow:0 0 25px rgba(74,184,255,.2)}
 .skip{position:absolute;top:-100px;left:10px;background:linear-gradient(135deg,#1a7acc,#4ab8ff);color:#fff;padding:10px 20px;border-radius:0 0 8px 8px;z-index:1000;font-weight:700}
 .skip:focus{top:0}
-.site-header{background:rgba(10,22,40,.85);backdrop-filter:blur(20px);padding:12px 0;border-bottom:1px solid rgba(26,48,80,.5);position:sticky;top:0;z-index:100;box-shadow:0 4px 40px rgba(0,0,0,.3)}
-.header-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.brand{display:flex;align-items:center;gap:12px;font-size:22px;font-weight:800;color:#fff}
-.brand img{height:44px;width:auto;display:block}
-.menu-button{display:none;background:none;border:1px solid #1a3050;color:#d0e4f8;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:16px}
-.main-nav{display:flex;align-items:center;gap:8px 14px;flex-wrap:wrap}
-.main-nav a{color:#8aaac8;font-weight:500;font-size:13.5px;transition:.3s;white-space:nowrap}
+
+/* ===== КОМПАКТНАЯ ШАПКА ===== */
+.site-header{background:rgba(10,22,40,.85);backdrop-filter:blur(20px);padding:6px 0;border-bottom:1px solid rgba(26,48,80,.5);position:sticky;top:0;z-index:100;box-shadow:0 4px 40px rgba(0,0,0,.3)}
+.header-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:nowrap;gap:6px}
+.brand{display:flex;align-items:center;gap:8px;font-size:18px;font-weight:800;color:#fff;flex-shrink:0}
+.brand img{height:34px;width:auto;display:block}
+.menu-button{display:none;background:none;border:1px solid #1a3050;color:#d0e4f8;padding:5px 10px;border-radius:8px;cursor:pointer;font-size:13px}
+.main-nav{display:flex;align-items:center;gap:2px 6px;flex-wrap:nowrap;flex:1;justify-content:center}
+.main-nav a{color:#8aaac8;font-weight:500;font-size:11.5px;transition:.3s;white-space:nowrap;padding:2px 3px;letter-spacing:-.2px}
 .main-nav a:hover{color:#4ab8ff}
 .main-nav a.active{color:#4ab8ff;border-bottom:2px solid #4ab8ff}
-.header-actions{display:flex;align-items:center;gap:12px}
-.age-badge{background:#1a3050;padding:4px 12px;border-radius:20px;font-weight:700;color:#4ab8ff;font-size:13px}
-.btn{display:inline-block;padding:10px 24px;border-radius:30px;font-weight:600;transition:.3s;border:none;cursor:pointer;font-size:15px;text-align:center}
+.header-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.age-badge{background:#1a3050;padding:3px 8px;border-radius:20px;font-weight:700;color:#4ab8ff;font-size:11px}
+.btn{display:inline-block;padding:7px 16px;border-radius:30px;font-weight:600;transition:.3s;border:none;cursor:pointer;font-size:12.5px;text-align:center}
 .btn.primary{background:linear-gradient(135deg,#1a7acc,#4ab8ff);color:#fff;box-shadow:0 4px 25px rgba(26,124,204,.3)}
 .btn.primary:hover{transform:scale(1.04);box-shadow:0 8px 40px rgba(74,184,255,.35)}
 .btn.ghost{background:transparent;color:#8aaac8;border:1px solid #1a3050}
 .btn.ghost:hover{border-color:#4ab8ff;color:#4ab8ff}
 .btn.large{padding:14px 40px;font-size:18px}
+
 .page-hero{padding:50px 0 60px;background:linear-gradient(145deg,rgba(10,22,40,.8),rgba(15,32,64,.6));border-radius:0 0 40px 40px;position:relative;overflow:hidden}
 .page-hero::before{content:'';position:absolute;top:-30%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(26,122,204,.06),transparent 70%);pointer-events:none}
 .page-hero::after{content:'';position:absolute;bottom:-20%;left:-5%;width:400px;height:400px;background:radial-gradient(circle,rgba(74,184,255,.04),transparent 70%);pointer-events:none}
@@ -143,7 +146,7 @@ a:hover{color:#7acbff;text-shadow:0 0 25px rgba(74,184,255,.2)}
 .mobile-bar a{flex:1;text-align:center;padding:10px;border-radius:30px;font-weight:600}
 .mobile-bar a:first-child{background:transparent;border:1px solid #1a3050;color:#8aaac8}
 .mobile-bar a:last-child{background:linear-gradient(135deg,#1a7acc,#4ab8ff);color:#fff}
-.toc-card{background:rgba(17,29,53,.6);border:1px solid rgba(26,48,80,.4);border-radius:16px;padding:24px;position:sticky;top:90px;align-self:start}
+.toc-card{background:rgba(17,29,53,.6);border:1px solid rgba(26,48,80,.4);border-radius:16px;padding:24px;position:sticky;top:80px;align-self:start}
 .toc-card strong{display:block;background:linear-gradient(135deg,#1a7acc,#4ab8ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:18px;margin-bottom:12px}
 .toc-card a{display:block;color:#8aaac8;padding:6px 0;font-size:14px;border-bottom:1px solid rgba(26,48,80,.3);transition:.3s}
 .toc-card a:hover{color:#4ab8ff}
@@ -156,10 +159,40 @@ a:hover{color:#7acbff;text-shadow:0 0 25px rgba(74,184,255,.2)}
 .age-gate-card p{color:#8aaac8;margin-bottom:24px}
 .age-gate-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .age-gate-card a{display:block;margin-top:16px;color:#5a7a9a;font-size:14px}
-@media (max-width:1100px){.main-nav a{font-size:12.5px;gap:6px 10px}}
-@media (max-width:992px){.hero-grid{grid-template-columns:1fr}.home-overview{grid-template-columns:1fr}.toc-card{position:static}.footer-grid{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr}}
-@media (max-width:768px){.menu-button{display:block}.main-nav{display:none;width:100%;flex-direction:column;align-items:stretch;padding:16px 0;gap:8px}.main-nav.open{display:flex}.header-actions{width:100%;justify-content:center;padding-top:12px;border-top:1px solid rgba(26,48,80,.3)}.page-hero h1{font-size:30px}.footer-grid{grid-template-columns:1fr}.footer-cta .container{flex-direction:column;text-align:center}.mobile-bar{display:flex}.site-footer{padding-bottom:80px}}
-@media (max-width:480px){.page-hero h1{font-size:24px}.btn.large{padding:12px 24px;font-size:16px}.hero-buttons{flex-direction:column}.age-gate-card{padding:24px;margin:16px}}
+
+@media (max-width:1150px){
+  .main-nav a{font-size:11px;padding:2px 2px}
+  .header-actions .btn{padding:6px 12px;font-size:11.5px}
+  .brand img{height:30px}
+  .age-badge{padding:2px 6px;font-size:10px}
+}
+@media (max-width:992px){
+  .header-row{flex-wrap:wrap}
+  .main-nav{flex-wrap:wrap;justify-content:center;order:3;width:100%;padding-top:6px}
+  .hero-grid{grid-template-columns:1fr}
+  .home-overview{grid-template-columns:1fr}
+  .toc-card{position:static}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .split{grid-template-columns:1fr}
+}
+@media (max-width:768px){
+  .menu-button{display:block}
+  .main-nav{display:none;width:100%;flex-direction:column;align-items:stretch;padding:16px 0;gap:8px;order:4}
+  .main-nav.open{display:flex}
+  .main-nav a{font-size:14px;padding:6px 0}
+  .header-actions{width:100%;justify-content:center;padding-top:12px;border-top:1px solid rgba(26,48,80,.3)}
+  .page-hero h1{font-size:30px}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-cta .container{flex-direction:column;text-align:center}
+  .mobile-bar{display:flex}
+  .site-footer{padding-bottom:80px}
+}
+@media (max-width:480px){
+  .page-hero h1{font-size:24px}
+  .btn.large{padding:12px 24px;font-size:16px}
+  .hero-buttons{flex-direction:column}
+  .age-gate-card{padding:24px;margin:16px}
+}
 [hidden]{display:none !important}
 </style>
 </head>
@@ -664,7 +697,7 @@ if(ageReject){ageReject.addEventListener('click',function(){window.location.href
 var menuButton=document.querySelector('[data-menu]');
 var nav=document.querySelector('[data-nav]');
 if(menuButton&&nav){menuButton.addEventListener('click',function(){nav.classList.toggle('open');var expanded=nav.classList.contains('open');menuButton.setAttribute('aria-expanded',expanded);menuButton.innerHTML=expanded?'<i class="fas fa-times"></i> Закрыть':'<i class="fas fa-bars"></i> Меню';});}
-document.querySelectorAll('a[href^="#"]').forEach(function(anchor){anchor.addEventListener('click',function(e){var targetId=this.getAttribute('href');if(targetId==='#')return;var targetElement=document.querySelector(targetId);if(targetElement){e.preventDefault();var headerOffset=80;var elementPosition=targetElement.getBoundingClientRect().top;var offsetPosition=elementPosition+window.pageYOffset-headerOffset;window.scrollTo({top:offsetPosition,behavior:'smooth'});}});});
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor){anchor.addEventListener('click',function(e){var targetId=this.getAttribute('href');if(targetId==='#')return;var targetElement=document.querySelector(targetId);if(targetElement){e.preventDefault();var headerOffset=70;var elementPosition=targetElement.getBoundingClientRect().top;var offsetPosition=elementPosition+window.pageYOffset-headerOffset;window.scrollTo({top:offsetPosition,behavior:'smooth'});}});});
 var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.style.opacity='1';entry.target.style.transform='translateY(0)';}});},{threshold:0.1});
 document.querySelectorAll('.trust-card, .feature-grid a, .content-card, .review-preview article, .logo-grid a').forEach(function(el){el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity 0.5s ease, transform 0.5s ease';observer.observe(el);});
 console.log('Lucky Bear Casino — index.html загружен!');
